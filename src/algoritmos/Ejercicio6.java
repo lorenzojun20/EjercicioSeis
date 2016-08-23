@@ -121,73 +121,71 @@ public class Ejercicio6 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
-       String res;
-      int nump,tamcent,numc;
-      double op1,op2,op3,total=0;
-       if(txtNumPalabras.getText().trim().isEmpty()){
-           JOptionPane.showMessageDialog(this, "Digite Número de Palabras","ERROR",JOptionPane.ERROR_MESSAGE);
-           txtNumPalabras.requestFocusInWindow();
-       }
-       else if(txtTamañoCent.getText().trim().isEmpty()){
-           JOptionPane.showMessageDialog(this, "Digite Tamaño en Centímetros","ERROR",JOptionPane.ERROR_MESSAGE);
-           txtTamañoCent.requestFocusInWindow();
-       }
-       else if(txtNumColor.getText().trim().isEmpty()){
-           JOptionPane.showMessageDialog(this, "Digite Número de Colores","ERROR",JOptionPane.ERROR_MESSAGE);
-           txtNumColor.requestFocusInWindow();
-       }else{
-           nump=Integer.parseInt(txtNumPalabras.getText());
-           tamcent=Integer.parseInt(txtTamañoCent.getText());
-           numc=Integer.parseInt(txtNumColor.getText());
-           
-           op1=nump*20000;
-           op2=tamcent*15000;
-           op3=numc*25000;
-           total=op1+op2+op3;
-           
-       }
-       res=String.valueOf(total);
-       txtTotal.setText("$"+res);
-       
+        String res;
+        int nump, tamcent, numc;
+        double op1, op2, op3, total = 0;
+        if (txtNumPalabras.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Número de Palabras", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtNumPalabras.requestFocusInWindow();
+        } else if (txtTamañoCent.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Tamaño en Centímetros", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtTamañoCent.requestFocusInWindow();
+        } else if (txtNumColor.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Número de Colores", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtNumColor.requestFocusInWindow();
+        } else {
+            nump = Integer.parseInt(txtNumPalabras.getText());
+            tamcent = Integer.parseInt(txtTamañoCent.getText());
+            numc = Integer.parseInt(txtNumColor.getText());
+
+            op1 = nump * 20000;
+            op2 = tamcent * 15000;
+            op3 = numc * 25000;
+            total = op1 + op2 + op3;
+
+        }
+        res = String.valueOf(total);
+        txtTotal.setText("$" + res);
+
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
-    txtNumPalabras.setText("");
-    txtTamañoCent.setText("");
-    txtNumColor.setText("");
-    txtTotal.setText("");
-    
-    txtNumPalabras.requestFocusInWindow();
+        txtNumPalabras.setText("");
+        txtTamañoCent.setText("");
+        txtNumColor.setText("");
+        txtTotal.setText("");
+
+        txtNumPalabras.requestFocusInWindow();
     }//GEN-LAST:event_cmdBorrarActionPerformed
 
     private void txtNumPalabrasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumPalabrasKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtNumPalabrasKeyTyped
 
     private void txtTamañoCentKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTamañoCentKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtTamañoCentKeyTyped
 
     private void txtNumColorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumColorKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtNumColorKeyTyped
 
     /**
